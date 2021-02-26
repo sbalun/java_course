@@ -2,7 +2,7 @@ package chapter3;
 /*
 IF - ELSE - IF Statements
 Who? A Student
-What? wants to know their corresponding letter grade given a number grade
+What? translate a number grade into it's corresponding letter grade
 Why? so they may know the letter grade they will get on their report card
  */
 import java.util.Scanner;
