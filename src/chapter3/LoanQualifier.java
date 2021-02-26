@@ -25,7 +25,7 @@ public class LoanQualifier {
 
         // Make decision
         if (salary >= requiredSalary) {
-            if (yearsOfEmployment > requiredYearsEmployed) {
+            if (yearsOfEmployment >= requiredYearsEmployed) {
                 System.out.println("Congratulations, you have qualified for a loan");
             } else {
                 System.out.println("Sorry you must have worked at your current job "
