@@ -15,10 +15,10 @@ public class GradeMessage {
         // get the score
         System.out.println("Enter your grade: ");
         Scanner scanner = new Scanner(System.in);
-        double score = scanner.nextDouble();
+        String grade = scanner.next();
 
         // determine the letter grade
-        char grade;
+        String message;
 
         switch (grade){
             case "A":
