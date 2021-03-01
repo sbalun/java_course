@@ -1,6 +1,6 @@
 package chapter3;
 /*
-IF - ELSE - IF Statements
+Chapter 3d: IF - ELSE - IF Statements
 Who? A Student
 What? translate a number grade into it's corresponding letter grade
 Why? so they may know the letter grade they will get on their report card
@@ -32,7 +32,7 @@ public class TestResults {
         else if (testScore < 90) {
             grade = 'B';
         }
-        else{
+        else {
             grade = 'A';
         }
         System.out.println("Your score of " + testScore + " resulted in a grade of " + grade);

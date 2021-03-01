@@ -11,11 +11,14 @@ Using the SWITCH statement.
 public class GradeMessage {
 
     public static void main(String[] args){
+
+        // get the score
         System.out.println("Enter your grade: ");
         Scanner scanner = new Scanner(System.in);
-        String grade = scanner.next();
+        double score = scanner.nextDouble();
 
-        String message;
+        // determine the letter grade
+        char grade;
 
         switch (grade){
             case "A":
