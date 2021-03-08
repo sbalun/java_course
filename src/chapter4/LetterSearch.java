@@ -8,7 +8,7 @@ Search a String to determine if it contains the letter 'A'
  */
 public class LetterSearch {
 
-    public static void main(String [] args){
+    public static void main(String[] args){
 
         //Get Text
         System.out.println("Enter some text");
