@@ -5,7 +5,7 @@ public class Rectangle {
     // Global variables or fields
     // private - no other class outside of this class can access the private variables
 
-    // Encapsulation says that fields should be private and the methods used to get and set those fields should be public
+    // Encapsulation - Hiding the data of a class by making its fields private and allowing access through public methods
     private double length;
     private double width;
 
@@ -34,7 +34,7 @@ public class Rectangle {
         return length * width;
     }
 
-    // Get or set length
+    // Get and set length
     public double getLength(){
         return length;
     }
