@@ -26,7 +26,7 @@ public class InstantCreditCheck {
         boolean isQualified = isUserQualified(salary, creditScore);
 
         // Notify User
-        System.out.println(notifyUser(isQualified));
+        notifyUser(isQualified);
     }
 
     // A method can only return one value
@@ -53,13 +53,11 @@ public class InstantCreditCheck {
     }
 
     // This method returns the string that should be used in the user notification
-    public static String notifyUser(boolean isQualified){
-        String theString;
+    public static void notifyUser(boolean isQualified){
         if(isQualified){
-            theString = "Congrats, you are qualified";
+            System.out.println("Congrats, you are qualified");
         } else{
-            theString = "Sorry, you are not qualified";
+            System.out.println("Sorry, you are not qualified");
         }
-        return theString;
     }
 }
