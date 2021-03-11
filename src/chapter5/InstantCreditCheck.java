@@ -52,7 +52,7 @@ public class InstantCreditCheck {
         }
     }
 
-    // This method returns the string that should be used in the user notification
+    // This method prints the user notification message
     public static void notifyUser(boolean isQualified){
         if(isQualified){
             System.out.println("Congrats, you are qualified");
