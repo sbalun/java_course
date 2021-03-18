@@ -33,6 +33,7 @@ public class HomeAreaCalculator {
             totalArea = totalArea + roomArea;
             System.out.println("The total area is currently " + totalArea + "sq ft");
         }
+        scanner.close();
         System.out.println("The total area of the " + numberOfRooms + " rooms is " + totalArea);
     }
 }
