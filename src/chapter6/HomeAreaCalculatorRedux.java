@@ -32,6 +32,5 @@ public class HomeAreaCalculatorRedux {
 
     public double calculateTotalArea(Rectangle rectangle1, Rectangle rectangle2){
         return rectangle1.calculateArea() + rectangle2.calculateArea();
-
     }
 }
