@@ -21,7 +21,7 @@ public class Rectangle {
 
     public Rectangle(double length, double width){
         this.length = length; // can be set this way
-        setWidth(width); // or can be set this way.  This is to demonstrate different ways to acheive this.
+        setWidth(width); // or can be set this way.  This is to demonstrate different ways to achieve this.
     }
 
     // Perimeter of a rectangle method
