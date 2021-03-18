@@ -9,7 +9,7 @@ public class HomeAreaCalculatorRedux {
     public static void main(String [] args){
 
         // In order to get access to the getRoom method which is not static we
-        // have to instantiate an instance of of HomeAreaCalculator Class
+        // have to instantiate an instance of HomeAreaCalculator Class
         // Every class has a built in default constructor even if you don't implicitly define one
         HomeAreaCalculatorRedux calculator = new HomeAreaCalculatorRedux();
 
