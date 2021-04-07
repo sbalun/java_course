@@ -16,7 +16,6 @@ public class PhoneBillCalculator {
     private static double taxRate = .15;
     private static double planFee = 0.00;
     private static int overageMinutes = 0;
-    public static double subTotal = 0.00;
 
     // Main method
     public static void main(String[] args){
