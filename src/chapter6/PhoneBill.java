@@ -22,71 +22,99 @@ public class PhoneBill {
 
     // Global Variables
     private double overageRate = .25;
-    private double taxRate = .15;
     private double planFee;
     private int overageMinutes = 0;
-    private int identifer;
+    private int id;
     private int allocattedMinutes;
     private int usedMinutes;
 
     // Constructors
     public PhoneBill(){
-        this.identifer = 999999;
-        this.planFee = 0.00;
-        this.overageMinutes = 0;
-        this.allocattedMinutes = 0;
-        this.usedMinutes = 0;
+        id = 999999;
+        planFee = 79.99;
+        overageMinutes = 0;
+        allocattedMinutes = 500;
+        usedMinutes = 0;
     }
 
-    public PhoneBill(int identifier){
-        this.identifer = identifier;
-        this.planFee = 0.00;
-        this.overageMinutes = 0;
-        this.allocattedMinutes = 0;
-        this.usedMinutes = 0;
+    public PhoneBill(int id){
+        this.id = id;
+        planFee = 79.99;
+        overageMinutes = 0;
+        allocattedMinutes = 500;
+        usedMinutes = 0;
     }
 
     public PhoneBill(int identifier, double planFee, int allocatedMinutes, int usedMinutes){
-        this.identifer = identifier;
+        this.id = identifier;
         this.planFee = planFee;
         this.allocattedMinutes = allocatedMinutes;
         this.usedMinutes = usedMinutes;
     }
 
+    // Getters and Setters
+    public int getID(){
+        return id;
+    }
+
+    public void setID(int id){
+        this.id = id;
+    }
+
+    public double getPlanFee(){
+        return planFee;
+    }
+
+    public void setPlanFee(double planFee){
+        this.planFee = planFee;
+    }
+
+    public int getAllocattedMinutes(){
+        return allocattedMinutes;
+    }
+
+    public void setAllocattedMinutes(int minutes){
+        allocattedMinutes = minutes;
+    }
+
+    public int getUsedMinutes(){
+        return usedMinutes;
+    }
+
+    public void setUsedMinutes(int minutes){
+        usedMinutes = minutes;
+    }
+
     // calculateTax method
     public double calculateTax(){
-        return this.planFee * taxRate;
+        double taxRate = .15;
+        return taxRate * (planFee + calculateOverageFees());
     }
 
     // calculateOverageFees method
     public double calculateOverageFees(){
-        return this.getOverageMinutes() * overageRate;
+        return calculateOverageMinutes() * overageRate;
     }
 
     // getBillTotal method
     public double getTotalBill(){
-        return this.planFee + calculateOverageFees() + calculateTax();
+        return planFee + calculateOverageFees() + calculateTax();
     }
 
     // printBill method
     public String printBill(){
         return "Your total bill is $" + getTotalBill() + "\n"
                 + "Your plan fee is $" + planFee + "0"  + "\n"
-                + "You have " + getOverageMinutes() + "0" + " overage minutes" + "\n"
+                + "You have " + calculateOverageMinutes() + "0" + " overage minutes" + "\n"
                 + "Your tax is $" + calculateTax() + "\n"
                 + "Your overage fee is $" + calculateOverageFees() + "0";
     }
 
-    public void setPlanFee(double planFee){
-        this.planFee = planFee;
-    }
-    public double getPlanFee(){
-        return this.planFee;
-    }
-    public double getOverageMinutes(){
-        this.overageMinutes = 0;
+    //
+    public double calculateOverageMinutes(){
+        overageMinutes = 0;
         if(usedMinutes > allocattedMinutes){
-            this.overageMinutes = usedMinutes - allocattedMinutes;
+            overageMinutes = usedMinutes - allocattedMinutes;
         }
         return overageMinutes;
     }
