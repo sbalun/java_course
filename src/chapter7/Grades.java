@@ -42,7 +42,6 @@ public class Grades {
         return calculateSum()/grades.length;
     }
 
-    //5:57 in lesson 7c
     public static double getHighest(){
         int highest = grades[0];
         for(int grade : grades){
