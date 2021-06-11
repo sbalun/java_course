@@ -44,7 +44,7 @@ public class Grades {
 
     public static double getHighest(){
         int highest = grades[0];
-        for(int grade : grades){
+        for(int grade: grades){
             if(grade > highest){
                 highest = grade;
             }
@@ -54,7 +54,7 @@ public class Grades {
 
     public static double getlowest(){
         int lowest = grades[0];
-        for(int grade : grades){
+        for(int grade: grades){
             if(grade < lowest){
                 lowest = grade;
             }
