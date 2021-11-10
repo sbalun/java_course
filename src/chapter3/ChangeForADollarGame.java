@@ -41,17 +41,17 @@ public class ChangeForADollarGame {
         // Get number of Nickels.  Add them to total value
         System.out.println("How many nickels do you have? ");
         numberOfNickels = scanner.nextInt();
-        totalValueOfEnteredCoins = totalValueOfEnteredCoins + (numberOfNickels * nickels);
+        totalValueOfEnteredCoins += (numberOfNickels * nickels);
 
         // Get number of Dimes.  Add them to total value
         System.out.println("How many dimes do you have? ");
         numberOfDimes = scanner.nextInt();
-        totalValueOfEnteredCoins = totalValueOfEnteredCoins + (numberOfDimes * dimes);
+        totalValueOfEnteredCoins += (numberOfDimes * dimes);
 
         // Get number of Quarters.  Add them to total value
         System.out.println("How many quarters do you have? ");
         numberOfQuarters = scanner.nextInt();
-        totalValueOfEnteredCoins = totalValueOfEnteredCoins + (numberOfQuarters * quarters);
+        totalValueOfEnteredCoins += (numberOfQuarters * quarters);
 
         // Compare the total value to the maximum allowed value of one dollar
         if (totalValueOfEnteredCoins == dollar){
@@ -61,7 +61,7 @@ public class ChangeForADollarGame {
             differenceAmount = dollar - totalValueOfEnteredCoins;
             System.out.println("You entered $" + String.format("%.2f", abs(differenceAmount)) + " less than $1.00");
         }
-        else if (totalValueOfEnteredCoins > dollar){
+        else {
             differenceAmount = dollar - totalValueOfEnteredCoins;
             System.out.println("You entered $" + String.format("%.2f", abs(differenceAmount)) + " more than $1.00");
         }
