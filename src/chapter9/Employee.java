@@ -2,6 +2,14 @@ package chapter9;
 
 public class Employee extends Person {
 
+    private String employeeId;
+    private String title;
+
+    public Employee(){
+        super("Brooke");
+        System.out.println("In Employee default constructor");
+    }
+
     public String getEmployeeId() {
         return employeeId;
     }
@@ -18,6 +26,4 @@ public class Employee extends Person {
         this.title = title;
     }
 
-    private String employeeId;
-    private String title;
 }
