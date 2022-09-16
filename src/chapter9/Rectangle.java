@@ -31,6 +31,10 @@ public class Rectangle {
 
     protected double sides = 4;
 
+    public double calculatePerimeter(){
+        return (2 * length) + (2 * width);
+
+    }
 
 
 }
