@@ -16,7 +16,7 @@ public class TasteTester {
         System.out.println("The price of cake1 is now " + cake1.getPrice());
 
         BirthdayCake birthdayCake = new BirthdayCake("coconut", 21.12, 5);
-        
+
         System.out.println("The birthday cake flavor is " + birthdayCake.getFlavor());
         System.out.println("The birthday cake price is " + birthdayCake.getPrice());
         System.out.println("The birthday cake number of candles is " + birthdayCake.getCandles());
