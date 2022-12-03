@@ -1,5 +1,22 @@
 package chapter10;
+/*
+*-------------------------*
+| Polymorphism Key Points |
+*-------------------------*
 
+    - Type vs Instance
+    An object can have a superclass type, Animal, and a subclass instance, dog
+
+    - Access
+    Polymorphic objects can only access the methods of their type (not their instance).  Casing is
+    required in order to access the method of their instance
+
+    - Overridden Methods
+    If a method is overidden by the subclass, the polymorphic object will execute the overridden method at runtime
+
+    - InstanceOf Operator
+    The instanceof operator is used to determine if an object is an instance of a certain class
+ */
 public class Zoo {
     public static void main(String[] args) {
 
