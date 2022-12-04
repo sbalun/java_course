@@ -1,20 +1,19 @@
 package chapter11;
 
 /*-
-*--------------*
-|  Abstraction |
-* -------------*
-     - This reserved word is a non-access modifier that can be used on classes and methods.
-     - Used when you want to define a template for a class or a method, but do not intend for it to be used as is.
-     - Not designed to be instantiated.  Meant to be extended.  Subclass must implement.
-     - Serves as a template not implementation
-     - Can contain both abstract and implemented methods
-*------------------*
-|  Abstract Method |
-* -----------------*
-     - Has no body.  Only signature is defined.
-     - Not to be run as is
-     - Meant to be overridden by a sub-class
+*-------------------------*
+|  Abstraction Key Points |
+* ------------------------*
+     - Templates
+        - Abstract classes and methods are templates that are meant to be implemented by their subclasses
+     - Reserved Word
+        - Classes and methods are declared abstract by using the abstract key word
+     - Implementation required on inheritance
+        - If a subclass extends from an abstract class it must implement its abstract methods or be declared abstract itself.
+     - Abstract Classes
+        - Can not be instantiated
+        - Only to be used as a superclass
+        - If even one method in a class is abstract the class must be declared abstract
  */
 
 public abstract class Shape {
