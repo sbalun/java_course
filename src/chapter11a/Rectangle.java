@@ -1,4 +1,4 @@
-package chapter11;
+package chapter11a;
 
 public class Rectangle extends Shape{
 
