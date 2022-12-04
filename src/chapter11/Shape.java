@@ -8,6 +8,7 @@ package chapter11;
      - Used when you want to define a template for a class or a method, but do not intend for it to be used as is.
      - Not designed to be instantiated.  Meant to be extended.  Subclass must implement.
      - Serves as a template
+     - Can contain both abstract and implemented methods
 *------------------*
 |  Abstract Method |
 * -----------------*
@@ -19,5 +20,9 @@ package chapter11;
 public abstract class Shape {
 
     abstract double calculateArea();
+
+    public void print (){
+        System.out.println("I am a shape");
+    }
 
 }
