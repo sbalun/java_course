@@ -5,7 +5,7 @@ import java.util.Set;
 
 class Sets {
 
-    // a Set is an unordered collection of unique objects.
+    // A Set is an unordered collection of unique objects
     // Can hold any type of object (not just strings like demonstrated below)
     // If attempt to add duplicate no error will occur but dup won't be added
 
