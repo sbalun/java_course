@@ -12,8 +12,9 @@ public class CollectionsDemo {
     }
 
     public static void printDashes(){
-        for (int i=3; i < 4; i++){
-            System.out.println("---------------------");
+        for (int i=1; i < 4; i++){
+            if (i == 3){System.out.print("\n");}
+            else{System.out.print("---------------------");}
         }
     }
     public static void setDemo(){
@@ -28,10 +29,10 @@ public class CollectionsDemo {
         System.out.println("Using the object variable name, fruit\n" + fruit); // [apple, lemon, banana, orange, lemon]
         printDashes();
         /*-
-        - The Collections interface provides an interator for you to loop through a collection
-        - The Set is an unordered collection so no methods to get items by index
-        - hasNext is a boolean expression
-        - i.next returns an object of whatever type is in the collection
+            - The Collections interface provides an interator for you to loop through a collection
+            - The Set is an unordered collection so no methods to get items by index
+            - hasNext is a boolean expression
+            - i.next returns an object of whatever type is in the collection
          */
         System.out.println("Using the iterator on the fruit object, fruit.iterator");
         var myFruit = fruit.iterator();
@@ -40,17 +41,20 @@ public class CollectionsDemo {
 
         printDashes();
         /*-
-        - Can also use this "enhanced" for loop
-        - Every item in this Set is a String so can say String item to iterate over fruit
-        - Note the item needs to be of type object unless you declare what type of object the Set constructor
+            - Can also use this "enhanced" for loop
+            - Every item in this Set is a String so can say String item to iterate over fruit
+            - Note the item needs to be of type object unless you declare what type of object the Set constructor
          */
         System.out.println("Using the for loop on the String object in the Set");
         for(String item: fruit){
             System.out.println(item);
         }
-        /*-
 
-         */
+        printDashes();
+        //  - Using the forEach() method
+        System.out.println("Using the forEach() method");
+        fruit.forEach(myVar -> System.out.println(myVar));
+        printDashes();
     }
 
     public static void listDemo(){
