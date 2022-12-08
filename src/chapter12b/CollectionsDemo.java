@@ -6,21 +6,51 @@ public class CollectionsDemo {
 
     public static void main(String[] args){
         setDemo();
-        listDemo();
-        queueDemo();
-        mapDemo();
+        //listDemo();
+        //queueDemo();
+        //mapDemo();
     }
 
+    public static void printDashes(){
+        for (int i=3; i < 4; i++){
+            System.out.println("---------------------");
+        }
+    }
     public static void setDemo(){
-        Set fruit = new HashSet();
+        Set<String> fruit = new HashSet();
         fruit.add("apple");
         fruit.add("lemon");
         fruit.add("banana");
         fruit.add("orange");
         fruit.add("lemon");
 
-        System.out.println(fruit.size()); //4
-        System.out.println(fruit); //[banana, orange, apple, lemon]
+        System.out.println(fruit.size()); // 4
+        System.out.println("Using the object variable name, fruit\n" + fruit); // [apple, lemon, banana, orange, lemon]
+        printDashes();
+        /*-
+        - The Collections interface provides an interator for you to loop through a collection
+        - The Set is an unordered collection so no methods to get items by index
+        - hasNext is a boolean expression
+        - i.next returns an object of whatever type is in the collection
+         */
+        System.out.println("Using the iterator on the fruit object, fruit.iterator");
+        var myFruit = fruit.iterator();
+        while (myFruit.hasNext())
+            System.out.println(myFruit.next());
+
+        printDashes();
+        /*-
+        - Can also use this "enhanced" for loop
+        - Every item in this Set is a String so can say String item to iterate over fruit
+        - Note the item needs to be of type object unless you declare what type of object the Set constructor
+         */
+        System.out.println("Using the for loop on the String object in the Set");
+        for(String item: fruit){
+            System.out.println(item);
+        }
+        /*-
+
+         */
     }
 
     public static void listDemo(){
@@ -33,7 +63,6 @@ public class CollectionsDemo {
 
         System.out.println(fruit.get(2)); // banana
         System.out.println(fruit.size()); // 5
-        System.out.println(fruit); // [apple, lemon, banana, orange, lemon]
     }
 
     public static void queueDemo(){
