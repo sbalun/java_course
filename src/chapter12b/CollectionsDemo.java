@@ -5,9 +5,9 @@ import java.util.*;
 public class CollectionsDemo {
 
     public static void main(String[] args){
-        setDemo();
+        //setDemo();
         //listDemo();
-        //queueDemo();
+        queueDemo();
         //mapDemo();
     }
 
@@ -29,7 +29,7 @@ public class CollectionsDemo {
         System.out.println("Using the object variable name, fruit\n" + fruit); // [apple, lemon, banana, orange, lemon]
         printDashes();
         /*-
-            - The Collections interface provides an interator for you to loop through a collection
+            - The Collections interface provides an iterator for you to loop through a collection
             - The Set is an unordered collection so no methods to get items by index
             - hasNext is a boolean expression
             - i.next returns an object of whatever type is in the collection
@@ -54,23 +54,57 @@ public class CollectionsDemo {
         //  - Using the forEach() method
         System.out.println("Using the forEach() method");
         fruit.forEach(myVar -> System.out.println(myVar));
+        //  - The shorthand method
+        //  - This is saying call this method and pass in whichever item we're on.
+        fruit.forEach(System.out::println);
         printDashes();
     }
 
     public static void listDemo(){
-        List fruit = new ArrayList();
+        List<String> fruit = new ArrayList();
         fruit.add("apple");
         fruit.add("lemon");
         fruit.add("banana");
         fruit.add("orange");
         fruit.add("lemon");
 
-        System.out.println(fruit.get(2)); // banana
-        System.out.println(fruit.size()); // 5
+        System.out.println(fruit.size()); // 4
+        System.out.println("Using the object variable name, fruit\n" + fruit); // [apple, lemon, banana, orange, lemon]
+        printDashes();
+        /*-
+            - The Collections interface provides an iterator for you to loop through a collection
+            - The Set is an unordered collection so no methods to get items by index
+            - hasNext is a boolean expression
+            - i.next returns an object of whatever type is in the collection
+         */
+        System.out.println("Using the iterator on the fruit object, fruit.iterator");
+        var myFruit = fruit.iterator();
+        while (myFruit.hasNext())
+            System.out.println(myFruit.next());
+
+        printDashes();
+        /*-
+            - Can also use this "enhanced" for loop
+            - Every item in this Set is a String so can say String item to iterate over fruit
+            - Note the item needs to be of type object unless you declare what type of object the Set constructor
+         */
+        System.out.println("Using the for loop on the String object in the Set");
+        for(String item: fruit){
+            System.out.println(item);
+        }
+
+        printDashes();
+        //  - Using the forEach() method
+        System.out.println("Using the forEach() method");
+        fruit.forEach(myVar -> System.out.println(myVar));
+        //  - The shorthand method
+        //  - This is saying call this method and pass in whichever item we're on.
+        fruit.forEach(System.out::println);
+        printDashes();
     }
 
     public static void queueDemo(){
-        Queue fruit = new LinkedList();
+        Queue<String> fruit = new LinkedList();
         fruit.add("apple");
         fruit.add("lemon");
         fruit.add("banana");
@@ -84,8 +118,40 @@ public class CollectionsDemo {
         System.out.println(fruit); // [lemon, banana, orange, lemon]
 
         System.out.println(fruit.peek()); // lemon
-    }
+        System.out.println(fruit.size()); // 4
+        System.out.println("Using the object variable name, fruit\n" + fruit); // [apple, lemon, banana, orange, lemon]
+        printDashes();
+        /*-
+            - The Collections interface provides an iterator for you to loop through a collection
+            - The Set is an unordered collection so no methods to get items by index
+            - hasNext is a boolean expression
+            - i.next returns an object of whatever type is in the collection
+         */
+        System.out.println("Using the iterator on the fruit object, fruit.iterator");
+        var myFruit = fruit.iterator();
+        while (myFruit.hasNext())
+            System.out.println(myFruit.next());
 
+        printDashes();
+        /*-
+            - Can also use this "enhanced" for loop
+            - Every item in this Set is a String so can say String item to iterate over fruit
+            - Note the item needs to be of type object unless you declare what type of object the Set constructor
+         */
+        System.out.println("Using the for loop on the String object in the Set");
+        for(String item: fruit){
+            System.out.println(item);
+        }
+
+        printDashes();
+        //  - Using the forEach() method
+        System.out.println("Using the forEach() method");
+        fruit.forEach(myVar -> System.out.println(myVar));
+        //  - The shorthand method
+        //  - This is saying call this method and pass in whichever item we're on.
+        fruit.forEach(System.out::println);
+        printDashes();
+    }
     public static void mapDemo(){
         Map fruitCalories = new HashMap();
         fruitCalories.put("apple", 95);
