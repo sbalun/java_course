@@ -152,6 +152,8 @@ public class CollectionsDemo {
         fruit.forEach(System.out::println);
         printDashes();
     }
+    }
+
     public static void mapDemo(){
         Map fruitCalories = new HashMap();
         fruitCalories.put("apple", 95);
