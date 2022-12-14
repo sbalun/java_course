@@ -26,7 +26,7 @@ public class ExceptionHandling {
             }
         }catch(FileNotFoundException | InputMismatchException e){
             e.printStackTrace();
-            //Even if you finish everything in the try,
+            //Even if you finish everything in the try block,
             //even if no exceptions are thrown, anything
             //placed inside finally will execute no matter what
         }finally{
