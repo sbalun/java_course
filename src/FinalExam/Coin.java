@@ -3,15 +3,26 @@ package FinalExam;
 import java.util.Random;
 
 public class Coin {
-    private int heads = 0;
-    private int tails = 1;
-    public int side = heads;
+    private String heads;
+    private String tails;
 
-    private int flip(){
+    public String getSide() {
+        return side;
+    }
+
+    public void setSide(String side) {
+        this.side = side;
+    }
+
+    private String side;
+
+    public String flip(){
         Random rand = new Random();
-        int myVar = rand.nextInt();
-        if (myVar % 2 == 0){
-            side = tails;
+        int randomNumber = rand.nextInt();
+        if (randomNumber % 2 == 0){
+            side = "Tails";
+        }else{
+            side = "Heads";
         }
         return side;
     }

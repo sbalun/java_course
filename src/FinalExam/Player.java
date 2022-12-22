@@ -1,8 +1,8 @@
 package FinalExam;
 
 public class Player {
-    private String name = "abc";
-    private String guess = "xyz";
+    private String name;
+    private String guess;
 
     public String getName() {
         return name;
@@ -21,7 +21,7 @@ public class Player {
     }
 
     public Player (){
-        this.name = "empty";
+        this.name = "no name given";
     }
 
     public Player(String name) {
