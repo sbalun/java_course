@@ -5,15 +5,12 @@ import java.util.Random;
 public class Coin {
     private String heads;
     private String tails;
-
     public String getSide() {
         return side;
     }
-
     public void setSide(String side) {
         this.side = side;
     }
-
     private String side = "heads";
 
     public String flip(){
