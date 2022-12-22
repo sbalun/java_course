@@ -9,14 +9,17 @@ public class CoinTossGame {
         Player player2 = new Player("Brooke");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println(player1.getName() + ", what is your guess? Heads or Tails? ");
-        player1.setGuess(scanner.next());
-        System.out.println(player1.getName() + " chose " + player1.getGuess());
+        do{
+            System.out.println(player1.getName() + ", what is your guess? heads or tails? ");
+            player1.setGuess(scanner.next());
+        } while (!player1.getGuess().equals("heads") && (!player1.getGuess().equals("tails")));
 
-        if(player1.getGuess().equals("Heads")){
-            player2.setGuess("Tails");
+        System.out.println(player1.getName() + " picked " + player1.getGuess());
+
+        if(player1.getGuess().equals("heads")){
+            player2.setGuess("tails");
         }else{
-            player2.setGuess("Heads");
+            player2.setGuess("heads");
         }
         System.out.println(player2.getName() + " gets " + player2.getGuess());
 

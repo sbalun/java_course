@@ -14,15 +14,13 @@ public class Coin {
         this.side = side;
     }
 
-    private String side;
+    private String side = "heads";
 
     public String flip(){
         Random rand = new Random();
         int randomNumber = rand.nextInt();
         if (randomNumber % 2 == 0){
-            side = "Tails";
-        }else{
-            side = "Heads";
+            side = "tails";
         }
         return side;
     }
